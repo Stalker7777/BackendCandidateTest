@@ -21,13 +21,14 @@
     ],
     "require": {
         "php": "^8.0",
+        "avadim/fast-excel-laravel": "^2.8",
         "illuminate/database": "*",
         "monolog/monolog": "^2.9",
+        "php-di/php-di": "^6.4",
         "slim/psr7": "^1.6",
         "slim/slim": "^4.11",
         "spatie/simple-excel": "^3.2",
         "symfony/console": "^5.4",
-        "php-di/php-di": "^6.4",
         "vlucas/phpdotenv": "^5.5"
     }
 }
