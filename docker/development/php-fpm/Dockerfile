@@ -8,6 +8,11 @@ RUN docker-php-ext-install \
     pdo_mysql \
     && docker-php-ext-enable mysqli
 
+RUN apk add --no-cache \
+      libzip-dev \
+      zip \
+    && docker-php-ext-install zip
+
 COPY ./conf.d /usr/local/etc/php/conf.d
 
 WORKDIR /app

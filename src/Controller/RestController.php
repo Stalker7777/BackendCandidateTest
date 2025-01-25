@@ -52,7 +52,6 @@ abstract class RestController
     // TODO: Реализовать метод для подгрузки xlsx
     protected function respondWithFileXlsx($filePath, $outputName = null, int $statusCode = 200): ResponseInterface
     {
-
     }
 
     protected function respondWithError(int $errorCode, mixed $errorMessage = null): ResponseInterface

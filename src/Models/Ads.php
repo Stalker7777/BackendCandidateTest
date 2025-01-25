@@ -12,9 +12,9 @@ class Ads extends Model
     protected $primaryKey = 'id';
     public $timestamps = false;
 
-    public static function existsRow(int $id): bool
+    public static function existsRow(int $id, int $date_consumption): bool
     {
-        if(self::query()->where('id', $id)->exists()) {
+        if(self::query()->where(['id' => $id, 'date_consumption' => $date_consumption])->exists()) {
             return true;
         }
 
@@ -26,9 +26,9 @@ class Ads extends Model
         self::query()->insert($row);
     }
 
-    public static function updateRow(int $id, array $row): void
+    public static function updateRow(int $id, int $date_consumption, array $row): void
     {
-        self::query()->where('id', $id)->update($row);
+        self::query()->where(['id' => $id, 'date_consumption' => $date_consumption])->update($row);
     }
 
     public static function deleteRow(int $id): void
